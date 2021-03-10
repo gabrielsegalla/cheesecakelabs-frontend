@@ -24,8 +24,9 @@ export default function App() {
         setNews(res.data);
     })
   }
-
+// eslint-disable-next-line
   useEffect(() => {
+// eslint-disable-next-line
     init();
   }, []);
 
