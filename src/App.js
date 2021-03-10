@@ -11,14 +11,14 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   const getCategories = () =>{
-    axios.get(`${Enviroments}/categories/`).then(res => {
+    axios.get(`${Enviroments.url}/categories/`).then(res => {
       setCategories(res.data);
     })
   }
 
   const init = () =>{
     getCategories()
-    axios.get(`${Enviroments}/news/`).then(res => {
+    axios.get(`${Enviroments.url}/news/`).then(res => {
         setIsLoading(false)
         console.log(res.data)
         setNews(res.data);
